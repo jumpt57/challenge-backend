@@ -14,16 +14,17 @@ import javax.inject.Inject;
  *
  * The BridgeClient has been injected and ready for use. Maybe the controller, method and route need some renaming?
  */
-public class MyController extends Controller {
+public class Account extends Controller {
 
     private final BridgeClient bridgeClient;
 
     @Inject
-    public MyController(BridgeClient bridgeClient) {
+    public Account(BridgeClient bridgeClient) {
         this.bridgeClient = bridgeClient;
     }
 
-    public Result myMethod() {
-        return ok(Json.toJson(new RoundedSum(bridgeClient.doSomething())));
+    public Result sumOfAccounts() {
+        return ok(Json.toJson(new RoundedSum(bridgeClient.sumOfAccounts())));
     }
+
 }

@@ -11,3 +11,6 @@ libraryDependencies ++= Seq(
   guice,
   ws
 )
+
+libraryDependencies += "org.assertj" % "assertj-core" % "3.13.2" % Test
+

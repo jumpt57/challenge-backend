@@ -2,7 +2,17 @@ package models;
 
 public class RoundedSum {
 
-    public RoundedSum(double amount) {
-        // Maybe there is something to do here
+    private double sum;
+
+    public RoundedSum(double sum) {
+        this.sum = sum;
+    }
+
+    public double getSum() {
+        return sum;
+    }
+
+    public void setSum(double sum) {
+        this.sum = sum;
     }
 }
